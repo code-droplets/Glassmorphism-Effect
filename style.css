@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main::before{
+    content: "ICE";
+    position: absolute;
+    left: 0%;
+    font-size: 18rem;
+    background-color: rgba(255, 255, 255, 0.452);
+    min-height: 100%;
+    width: 40%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem;
+    background: url(./trees.jpg);
+    background-position-x:60%;
+    background-position-y:60%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+.main::after{
+    content: "LAND";
+    position: absolute;
+    font-size: 18rem;
+    right: -5%;
+    top: 10%;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    padding: 2rem;
+    width: 60%;
+    color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+@media screen and (max-width: 1700px) {
+    .main::before{
+        font-size: 15rem;
+    }
+    .main::after{
+        font-size: 15rem;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .main::before{
+        font-size: 10rem;
+    }
+    .main::after{
+        font-size: 10rem;
+        right:-10%;
+    }
+    
+}
+@media screen and (max-width: 1000px) {
+    .main::before{
+        font-size: 8rem;
+        left: -5%;
+    }
+    .main::after{
+        font-size: 8rem;
+        right:-15%;
+    }
+    .main{
+        height: 80vh;
+    }
+   
+}
+@media screen and (max-width: 600px) {
+    .main::before{
+        font-size: 6rem;
+        left: -5%;
+    }
+    .main::after{
+        font-size: 6rem;
+        right:-15%;
+        top: -5%;
+    }
+    .main{
+        height: 80vh;
+    }
+   
+}
+@media screen and (max-width: 500px) {
+    .main::before{
+        font-size: 6rem;
+        left: 0%;
+        width: 45%;
+    }
+    .main::after{
+        font-size: 6rem;
+        right:-10%;
+        top: 12%;
+    }
+    .main{
+        height: 80vh;
+    }
+   
+}
